@@ -1,0 +1,54 @@
+  body {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .title {
+      font-size: 30px;
+      font-family: 'Dosis-Medium';
+    }
+
+    .title::before {
+      content: "♬ ";
+      color: #1976D2;
+    }
+
+    .hljs-comment {
+      font-style: initial;
+    }
+
+    #player {
+      margin: 24px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-bottom: 8px;
+      margin-right: 8px;
+      line-height: 20px;
+      height: 20px;
+      border-radius: 4px;
+      padding: 5px 1.2em;
+      color: #fff;
+      border-right: 2px solid #1976D2;
+      border-bottom: 4px solid #1976D2;
+      background-color: #2196f3;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    }
+
+    .btn:hover {
+      border-right: 2px solid #2196F3;
+      border-bottom: 4px solid #2196F3;
+      background-color: #64B5F6;
+    }
+
+    h2 {
+      font-size: 19px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .b600 {
+      font-weight: 600;
+    }

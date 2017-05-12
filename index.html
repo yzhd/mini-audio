@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://cdn.bootcss.com/highlight.js/9.11.0/styles/atom-one-light.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+
+<body>
+  <h1 class="tc title">mini-audio.js</h1>
+  <hr>
+  <div id="player"></div>
+  <h2>Api</h2>
+  <a class="btn trans b600">audio.play()</a>
+  <a class="btn trans b600">audio.pause()</a>
+  <a class="btn trans b600">audio.playPause()</a>
+  <a class="btn trans b600">audio.musicPlay(0)</a>
+  <a class="btn trans b600">audio.musicPlay(1)</a>
+  <a class="btn trans b600">audio.setMusic(index)</a>
+  <a class="btn trans b600">audio.changeMode()</a>
+  <a class="btn trans b600">audio.showMenu()</a>
+  <h2>Usage</h2>
+  <div>1. Include the <span class="b">audio.js</span> file</div>
+  <pre>
+<code class="HTML"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>player<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code>
+</pre>
+  <div>2. Initialise the audio player</div>
+  <pre>
+<code class="javascript">var audio = new Audio({
+  element: document.getElementById('player'),  //渲染的mod节点，默认是 #player
+  autoplay: true,                             //是否自动播放,默认false
+  menu: true,                                  //是否显示菜单
+  path: "",                                    //音频文件根目录，模式是root
+  music: [{
+    url: "",                                   //音乐的Url地址
+    title: "",                                 //音乐标题
+    author: "",                                //歌手
+    img: ""                                    //音乐图片
+  }]
+});
+</code>
+  </pre>
+
+  <hr>
+  <p class="tc c8 pt16 pb16">
+    This site is ©copyright Allen, 2017.
+  </p>
+  <script src="./js/audio.js"></script>
+  <script>
+    var audio = new Audio({
+      element: document.getElementById('player'),
+      autoplay: true,
+      menu: true,
+      path: "mp3",
+      music: [{
+        url: "On Your Mark.mp3",
+        title: "On Your Mark",
+        author: "CHAGE and ASKA",
+        img: "http://p1.music.126.net/UsbxKePGwCiRALQ5VJcsOg==/2335362697414055.jpg?param=130y130"
+      }, {
+        url: "想い出は远くの日々 - 天門.mp3",
+        title: "想い出は远くの日々",
+        author: "天門",
+        img: "http://p3.music.126.net/1gLX10_IGJIruMVMTvx3uA==/2450811418371976.jpg?param=130y130"
+      }]
+    });
+  </script>
+
+</body>
+
+</html>
